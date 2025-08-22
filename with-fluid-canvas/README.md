@@ -2,6 +2,8 @@
 
 An interactive WebGL-based fluid simulation built with React, TypeScript, and Vite. This demo showcases real-time fluid dynamics with customizable parameters and visual effects.
 
+https://github.com/user-attachments/assets/38b8a811-a500-4767-86a0-4bd99900f1bd
+
 ## Features
 
 - **Real-time fluid simulation** using WebGL shaders
