@@ -1,6 +1,6 @@
-# DrawingCanvas
+# DrawingCanvas Example
 
-A standalone React drawing canvas component with WebRTC streaming capabilities. Perfect for building drawing applications, whiteboard features, or creative tools with real-time streaming support.
+A React drawing canvas example with WebRTC streaming capabilities. This example demonstrates a feature-rich drawing component with multiple tools, recording capabilities, and real-time streaming support.
 
 ## Features
 
@@ -13,21 +13,51 @@ A standalone React drawing canvas component with WebRTC streaming capabilities. 
 - 🔧 **Customizable**: Flexible API for customization
 - 🚀 **Zero Dependencies**: Only requires React
 
-## Installation
+## Getting Started
+
+### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-npm install @examples/drawing-canvas
-# or
-yarn add @examples/drawing-canvas
-# or
-pnpm add @examples/drawing-canvas
+# Clone the repository
+git clone <repository-url>
+cd daydream-examples/with-drawing-canvas
+
+# Install dependencies
+pnpm install
 ```
 
-## Quick Start
+### Running the Example
+
+Start the development server:
+
+```bash
+pnpm run dev
+```
+
+The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
+
+### Available Scripts
+
+- `pnpm run dev` - Start the development server
+- `pnpm run build` - Build for production
+- `pnpm run preview` - Preview the production build locally
+
+## Example Usage
+
+The example app includes four different demonstrations:
+
+1. **Basic Canvas** - Simple drawing canvas with default settings
+2. **Custom Colors** - Canvas with a custom color palette
+3. **Recording** - Record your drawing session and download as video
+4. **Live Stream** - WebRTC integration showing canvas as a live video stream
+
+### Quick Start Code
 
 ```tsx
 import React from "react";
-import { DrawingCanvas } from "@examples/drawing-canvas";
+import { DrawingCanvas } from "./components/DrawingCanvas";
 
 function App() {
   const handleStreamReady = (stream: MediaStream) => {
@@ -204,7 +234,7 @@ import {
   BrushControls,
   ToolSelector,
   useBackgroundStreaming,
-} from "@examples/drawing-canvas";
+} from "./components/DrawingCanvas";
 
 function CustomDrawingApp() {
   const [selectedTool, setSelectedTool] = useState<DrawingTool>("brush");
