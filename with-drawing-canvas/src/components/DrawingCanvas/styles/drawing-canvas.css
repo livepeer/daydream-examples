@@ -1,0 +1,284 @@
+/* DrawingCanvas Component Styles */
+
+/* Container styles */
+.drawing-canvas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Canvas wrapper */
+.drawing-canvas-wrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: white;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Canvas element */
+.drawing-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  background-color: white;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.drawing-canvas.cursor-brush {
+  cursor: crosshair;
+}
+
+.drawing-canvas.cursor-fill {
+  cursor: pointer;
+}
+
+/* Tool selector */
+.tool-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f9fafb;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  flex-shrink: 0;
+}
+
+.tool-label {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.tool-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.tool-button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.tool-button:not(.active) {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.tool-button:not(.active):hover {
+  background-color: #d1d5db;
+}
+
+/* Brush controls */
+.brush-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+}
+
+.brush-size-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.brush-size-label {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.brush-size-slider {
+  flex: 1;
+  min-width: 0;
+}
+
+.brush-size-value {
+  font-size: 12px;
+  color: #6b7280;
+  width: 24px;
+  text-align: right;
+}
+
+.fade-control {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fade-checkbox {
+  width: 16px;
+  height: 16px;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.fade-checkbox:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.fade-label {
+  font-size: 12px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.undo-button {
+  font-size: 24px;
+  transition: colors 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.undo-button:enabled {
+  color: #374151;
+}
+
+.undo-button:enabled:hover {
+  color: #111827;
+}
+
+.undo-button:disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.clear-button {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 4px 8px;
+  font-size: 12px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-button:hover {
+  background-color: #e5e7eb;
+}
+
+/* Color palette */
+.color-palette {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.color-palette-label {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.color-palette-colors {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.color-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-button:hover {
+  transform: scale(1.1);
+}
+
+.color-button.selected {
+  border-color: #1f2937;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+/* Slider styles */
+.slider {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .tool-selector {
+    padding: 8px;
+  }
+
+  .tool-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .color-button {
+    width: 20px;
+    height: 20px;
+  }
+}
