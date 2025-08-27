@@ -22,7 +22,7 @@ export const useBackgroundStreaming = ({
   canvas,
   stream,
 }: UseBackgroundStreamingOptions): BackgroundStreamingHook => {
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const isStreamingRef = useRef(false);
 
   const startBackgroundStreaming = useCallback(() => {
