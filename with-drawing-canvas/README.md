@@ -2,6 +2,12 @@
 
 A React drawing canvas example with WebRTC streaming capabilities. This example demonstrates a feature-rich drawing component with multiple tools, recording capabilities, and real-time streaming support.
 
+
+https://github.com/user-attachments/assets/7156011f-9e19-4e38-9ad8-2778dad32312
+
+
+
+
 ## Features
 
 - 🎨 **Drawing Tools**: Brush, line, circle, and fill tools
