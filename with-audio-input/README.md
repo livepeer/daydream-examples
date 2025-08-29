@@ -1,5 +1,8 @@
 # How to Build an Audio-Reactive App (Component Guide)
 
+https://github.com/user-attachments/assets/5f093260-9bb6-4d05-a47a-d43237255a21
+
+
 ## What you'll build
 
 An `AudioInput` component system that captures microphone or demo audio, analyzes frequency levels in real-time, and renders audio-reactive visualizations to canvas for streaming applications.
