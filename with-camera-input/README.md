@@ -1,6 +1,9 @@
-# Camera and Screen Share Input Demo
+# Camera Input Demo
 
 A React component library for seamless camera and screen sharing functionality with automatic stream management, built with TypeScript and Tailwind CSS.
+
+<img width="1897" height="1078" alt="image" src="https://github.com/user-attachments/assets/2e2ab46c-fb10-4125-9cbb-9dc8d13c64d3" />
+
 
 ## 🚀 Features
 
